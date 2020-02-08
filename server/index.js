@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
     res.send(generator.generate({
-        length: 5,
+        length: 10,
         charset: 'alphabetic'
     }));
 });
