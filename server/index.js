@@ -10,7 +10,10 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
-    res.send(generator.generate());
+    res.send(generator.generate({
+        length: 5,
+        charset: 'alphabetic'
+    }));
 });
 
 app.listen(port, function () {
